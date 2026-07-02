@@ -1,1 +1,1 @@
-study
+studymanager app
