@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Study Tracker Dashboard</title>
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="style.css">
+
+    <!-- Google Font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"/>
+
+    <!-- Chart JS -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+
+<body>
+
+<div class="container">
+
+    <!-- Header -->
+
+    <header class="header">
+
+        <div>
+            <h1>📚 Study Tracker</h1>
+            <p id="todayDate"></p>
+        </div>
+
+        <div class="header-right">
+            <h2 id="greeting">Good Evening 👋</h2>
+        </div>
+
+    </header>
+
+    <!-- Progress Card -->
+
+    <section class="hero-card">
+
+        <div class="hero-top">
+
+            <h2>Today's Progress</h2>
+
+            <span id="progressPercent">0%</span>
+
+        </div>
+
+        <div class="progress">
+
+            <div id="progressBar"></div>
+
+        </div>
+
+    </section>
+
+    <!-- Analytics -->
+
+    <section class="analytics">
+
+        <div class="card">
+            <i class="fa-solid fa-list-check"></i>
+            <h3>Total Tasks</h3>
+            <p id="totalTasks">8</p>
+        </div>
+
+        <div class="card">
+            <i class="fa-solid fa-circle-check"></i>
+            <h3>Completed</h3>
+            <p id="completedTasks">0</p>
+        </div>
+
+        <div class="card">
+            <i class="fa-solid fa-hourglass-half"></i>
+            <h3>Remaining</h3>
+            <p id="remainingTasks">8</p>
+        </div>
+
+        <div class="card">
+            <i class="fa-solid fa-clock"></i>
+            <h3>Study Time</h3>
+            <p id="studyTime">0 hr</p>
+        </div>
+
+    </section>
+
+    <!-- Weekly Goals -->
+
+    <section class="glass">
+
+        <div class="section-title">
+
+            <h2>
+                <i class="fa-solid fa-bullseye"></i>
+                Weekly Goals
+            </h2>
+
+        </div>
+
+        <textarea
+            id="weeklyGoal"
+            placeholder="Write your goals for this week..."></textarea>
+
+    </section>
+
+    <!-- Daily Tasks -->
+
+    <section class="glass">
+
+        <div class="section-title">
+
+            <h2>
+                <i class="fa-solid fa-calendar-days"></i>
+                Today's Tasks
+            </h2>
+
+        </div>
+
+        <div id="taskContainer">
+
+            <!-- JS Generates Tasks -->
+
+        </div>
+
+    </section>
+
+    <!-- Analytics Chart -->
+
+    <section class="glass">
+
+        <div class="section-title">
+
+            <h2>
+                <i class="fa-solid fa-chart-pie"></i>
+                Analytics
+            </h2>
+
+        </div>
+
+        <div class="chart-box">
+
+            <canvas id="taskChart"></canvas>
+
+        </div>
+
+    </section>
+
+    <!-- Motivation -->
+
+    <section class="glass quote">
+
+        <i class="fa-solid fa-quote-left"></i>
+
+        <h2 id="quote">
+            Success is the sum of small efforts repeated every day.
+        </h2>
+
+    </section>
+
+</div>
+
+<!-- JS -->
+
+<script src="script.js"></script>
+
+</body>
+</html>
